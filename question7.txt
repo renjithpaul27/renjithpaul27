@@ -1,0 +1,62 @@
+----------------------------------------------------------------------------
+Q: Please choose three Core Values from the ten values above that you think is
+   your strength, share us one specific example where you showed it
+
+A: My strength are in : 
+    IT'S NOT ABOUT YOU
+    ALWAYS BE PREPARED
+    CRITICISM IS A GIFT
+
+      I value the company above anything else and hence am obsessed with customer issues.
+      We had couple of instances were customers were not happy with project execution 
+  and there were always last minute surprises or bugs in production which had impacted 
+  the business.
+      After one such project,I thought of myself from the customer's shoes and made changes 
+  to the project execution model. We followed an agile process with weekly demos to 
+  customer, maintained a requirement traceability matrix across all stages of the project 
+  and tried to deliver more meaningful insights,dashboards etc to customer in addition to 
+  actual requirements.
+      We planned before every meeting on what is needed and came up with report mockups,data model 
+  mockups so that the meetings will be much more easy and insightful.
+      After the project I asked for feedback from my team,customer,manager and created a lesson 
+  learned document and shared it across all the teams so that it can be used for all the project 
+  executions. Later it resulted in defect free releases and smooth project executions.
+
+-----------------------------------------------------------------------------
+Q: Please choose three Core Values from the ten values above that you think is
+   your weakness, share us one specific example where you showed it
+
+A:
+    STAND UP FOR WHAT YOU BELIEVE IN
+    SHOOT FOR GREATNESS
+    COLLABORATE WITH COMPASSION
+
+        Once we had a project estimation that came up and i due diligently estimated and came up with a 
+    4 months of development timeline.However the project manager had a pressure to reduce the timeline 
+    and he conducted several meetings with me and convinced me to reduce the effort to 2.5 months of development 
+    and I also agreed to that. However during project execution we (me and my team) felt the real pressure 
+    and had to work overtime and weekends to deliver the project.After this i learned that i should stand up 
+    for what i believe in and should have the courage to disagree.
+
+-----------------------------------------------------------------------------
+Q: Please order the ten Core Values based on your priority if you work at GOJEK
+   and why?
+
+A: My priority is as below.
+    1)IT'S NOT ABOUT YOU
+    2)SHOOT FOR GREATNESS
+    3)BE FAST AND FEARLESS
+    4)ALWAYS BE PREPARED
+    5)CRITICISM IS A GIFT
+    6)COLLABORATE WITH COMPASSION
+    7)COMMUNICATE WITH PURPOSE
+    8)STAND UP FOR WHAT YOU BELIEVE IN
+    9)EARN YOUR TITLE
+    10)BECOME A SCIENTIST
+  
+  I think this combination will really help in becoming a great leader and mentor. It will help 
+  in delivering the results at a high standard with proper ownership. It also values learning from 
+  failures and thinking big before taking decisions. It also helps in earning trust and value 
+  from the team and all can contribute well. 
+
+-----------------------------------------------------------------------------

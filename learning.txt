@@ -1,0 +1,1580 @@
+Numbers:
+    Prime : A number greater than 1 that has no divisors other than 1 and that number itself 
+    composite : A number with divisors other than 1 and itself 
+    Odd : Not divisible by 2 
+    Even : Divisibe by 2 
+    Factorial : 5*4*3*2 etc 
+    Fibnoacci Number
+Python (0 is false and any other number is true)
+ https://www.geeksforgeeks.org/python-programming-examples/
+ How to raise exceptions : https://rollbar.com/blog/throwing-exceptions-in-python/
+    raise exception 
+    for specific error 
+        raise valueerror 
+        raise typeerror 
+    Use assertion 
+        check one condition before running a statement 
+        assert(1=2), "its never equal"
+        if it fails 
+            it fails and program throws an assertion error 
+        if it passes 
+            then no error 
+    try 
+    except : If there is an error in try 
+    else : This runs if try is succesfull 
+    finally : Always runs irrespective of the exeption 
+    https://www.geeksforgeeks.org/python-assertion-error/
+ store previous value 
+ recursion factorial
+ urinal solution 
+ fibnoacci
+ reverse a list 
+ Python
+    General Purpose
+        Can be used to build any type of application with right tools and packages
+    Interpreted
+        Executes line by line
+        No need to compile before it runs
+    Dynamically typed
+        It will assign the datatype Dynamically
+        Doesnot allow implicit conversion of datatype so "1" +2 will error
+    Object oriented programming
+        Support class,objects
+        doesnot have access specifiers (private,public etc)
+    https://www.tutorialsteacher.com/python/python-number-type
+    Python is slower than compiled languages like c ( but writing a code in python is quick)
+    Python can be used anywhere like webdevelopment,data analysis, machine learning
+    Default python implementation : Done in C language called cpython
+    Simple.Easy to learn syntax
+    Capable of scripting? (General purpose programming language capable of scripting)
+    Open source
+    Asynchronous
+        Asynchronous programming is a type of parallel programming in which a unit of work is allowed to run separately from the primary application thread. When the work is complete, it notifies the main thread about completion or failure of the worker thread.
+    Disadvantages:
+        Slow compared to C 
+        Single threaded 
+ Memory management in python
+    python private heap space
+    memory manager
+    garbage collector
+    cpython
+    bytecodes
+    GIL:Global interpreter lock locks the current thread
+    Everything is an object in python (Reference count and pointer) 
+      Reference count is used by the garbage collector to deallocate memory
+      Pointer points to the actual memory location.
+    https://realpython.com/python-memory-management/
+ Namespace
+    For avoiding naming conflicts
+    builtin namespace(print,id etc),global namespace(Inside the module), local namespace(Inside the function) and non local namespace.
+    use the keyword global to rebind the variables from any scope
+    https://www.programiz.com/python-programming/namespace
+    global keyword. normal keyword scope is within the function only
+ To get the memory address of a variable : id(variable)
+ os,sys,math etc are modules in python : .py files available in lib folder
+ collections
+    advanced datatypes
+    counter
+ list :mutable,ordered,can contain diff datatypes,allow duplicates
+    https://realpython.com/python-lists-tuples/
+    https://towardsdatascience.com/60-questions-to-test-your-knowledge-of-python-lists-cca0ebfa0582
+    To add a value to the list : a.append(4)
+    list is ordered. It is always persistent
+    remove : a.remove('b') : returns nothing None, but removes the element, if duplicates are present then remove only the first one.
+    pop: a.pop(4) : it removes based on index, it returns the popped element. a.pop(1)
+    del :del a[1] :  Removes the element based on index. It returns nothing. del(a[1])
+    extend : To add a list into list as normal elements (Similar to a+b). Using append will create a sublist inside it    
+    Remove duplicates from a list : a=[1,2,3] then list(set(a))
+    Remove all elements from a list = a.clear()
+    -1 : returns the last index (- returns the elements from reverse)
+    a = [1,2] b=[3,4] a+b=[1,2,3,4]
+    Slice syntax: a[:] = Complete everything, a[:2]= Returns element from 0 to 1 (Will not include the 2)
+        a[2:6:2] = Every second element between the index 2 and 6
+        a[3:] : return the record from index 3 to the end.
+    a.sort() = To sort the records in a list. Cant sort if there is a None in it. It mutates (do the sort in same list). User sorted() to get a new object
+    a.reverse() = To reverse the contents of a list. 
+    a[::-1] = To reverse a list 
+    a[::2] = Prints the record from starting but 2 alternate (1,3,5,7)
+    min(a) = To get minimum value in list [even work for characters] based on a-z
+    max(a) = To get maximum value in list [even work for characters]
+    a.index[1] = 0 (index function can be used to get the index position)
+    a.insert(2,'value') = Insert a value at a specific index (Old value will be shifted and not overwritten)
+    a *2 = [1,2,3,1,2,3] = Repeats the list the number of times
+    https://www.programiz.com/python-programming/methods/list/copy
+    https://www.programiz.com/python-programming/shallow-deep-copy
+    list with a single object :singelton list
+    a=[1,2,3] 
+        prepend to the list 
+        [4,5] + a
+        append to the list
+        a + [4,5]
+ set:(https://towardsdatascience.com/35-questions-to-test-your-knowledge-of-python-sets-ad95267c43d9)
+    a set is defined as : a={1,2,3} or a=set() 
+    doesnot contain duplicate elements
+    unordered collection of elements (There is no meaning for indexing and we cant select records based on a[0])
+    each element in a set should be immutable. So list and dict are not allowed as elements in set.
+    add or update can be used to add elements into a set.
+    remove or discard can be used to remove elements from a set.
+    we can do union,interesection,difference etc in set (set theory)
+    Frozenset = immutable sets
+ Tuples https://realpython.com/python-lists-tuples/
+    Immutable,Ordered,Can be indexed
+    Can contain different types a=(1,2,"Renjith")
+    contain duplicates
+    unpacking can be done as below 
+        (s1, s2, s3, s4) = ('foo', 'bar', 'baz', 'qux')
+        ------
+        t=('foo', 'bar', 'baz', 'qux')
+        (s1, s2, s3, s4) = t 
+ dictionary https://realpython.com/python-dicts/
+    Key value pairs. Unordered.
+    Searches are fast as it uses keys to find records and is a hash table
+    https://www.kite.com/python/docs/builtins.dict.get
+ string 
+    a='renjith'
+    a[0]='r'
+    indexing works similar to list 
+    a[::-1] reverse a string 
+    a[0:2]:first 2 characters
+ comparison 
+    list : mutable,can contain duplicates,ordered, can contain diff objects(lists,string,int,functions),can be accessed by index(both o to positive/ -1 to ) ,nested, 
+    set : mutable , no duplicates, not ordered , cant contain list,dict etc, cannot be access by index, no nesting
+    tuple: not mutable(atomic),can contain duplicates,ordered,can be accessed by index , nested , program execution is faster with tuple compared to list 
+    dict: mutable , no duplicate keys, ordered, can be accessed by keys
+    string : atomic 
+    int/float :atomic
+ ternary operators (if else in a single line)
+    a if condition else b
+    conditional expressions
+    [on_true] if [expression] else [on_false]
+    small=x  if x < y else big = y
+ variable names can be only underscores and alphanumeric
+ access specifiers like _ and __ 
+    https://www.tutorialsteacher.com/python/public-private-protected-modifiers
+ classes https://dev.to/ogwurujohnson/distinguishing-instance-variables-from-class-variables-in-python-81#:~:text=Class%20Variables%20are%20variables%20that,the%2Dsame%20for%20each%20instance.&text=Next%2C%20we%20would%20be%20looking,and%20instance%20methods%20in%20python.
+    https://dev.to/adamlombard/python-class-vs-instance-vs-static-methods-2cd0
+    class object attribute like pi.
+        init ( parameters )
+ objects
+ modules
+ comprehension
+    List comprehension
+      newlist = [expression for item in iterable if condition == True]
+      a=55, 1, 2, 3, 4, 4, 5, 5, 99, 88]
+      b = [each for each in a if each%2==0]
+    Dict comprehension https://www.programiz.com/python-programming/dictionary-comprehension
+        https://www.geeksforgeeks.org/python-convert-a-list-to-dictionary/
+      dictionary = {key: value for vars in iterable}
+      even_dict = {k: v for (k, v) in original_dict.items() if v % 2 == 0} -- With conditions
+      square_dict = {num: num*num for num in range(1, 11)}
+      {55: 3025, 1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 99: 9801, 88: 7744}
+    advantages of using comprehension
+        Reducing 3 lines of code into one 
+        More pythonic
+        Peformance efficient as it does not have to resize the memory of the list 
+        No need to call append which will also reduce some memory 
+ enumerator
+    enumerate() allows tracking index when iterating over a sequence
+        for x,y in enumerate(list):
+            print(x, y) -- where x and y are the index and value respectievly
+    count of iterations in an iterator is calculated in enumerator
+    similar to counter set a=0 and using in a for loop
+ abstractclass
+    Defenition
+        An abstract class is the blueprint for other classes.
+        It allows you to create a set of methods that must be created within any child classes built from the abstract class.
+        A class which contains one or more abstract methods is called an abstract class.
+        An abstract method is a method that has a declaration but does not have an implementation.
+        While we are designing large functional units we use an abstract class.
+        When we want to provide a common interface for different implementations of a component, we use an abstract class.
+    ABC and decorator for abstract method
+    abstract class
+    abstract method
+    Cant create objects for abstract class
+    but can be used for creating child class eg: vehicle-->car,bike etc.
+    We can invoke the methods in abstract base class using super function
+    concrete classes : Are the subclasses of abstract which contains the implementation of abstract functions.
+ shallowcopy/deepcopy
+    = assigns a variable and reference are passed.
+    shallow copy creates a new object but values are passed as reference.
+    deep copy creates a new object and values are also copied
+    (shallow and deepy copy difference is only for compound objects like lists and clases) For normal variables the copy works. Also within list something like [1,2,[3,4]]
+ pandas
+    map function.(if need to generate more fields)
+    load the data from csv, datatype check,
+    comparison of duplicates.
+    aggregeations and natural key generation.
+ decorator https://www.programiz.com/python-programming/decorator
+    if we want to add more functionaly to an exisitng function, we can use decorator
+    https://www.programiz.com/python-programming/closure
+    wrapper function.
+    used in webframeworks like django or flask
+ voice analytics packages
+ lambda functions (https://www.programiz.com/python-programming/anonymous-function)
+    Anonyous functions--no name for the function
+    any number of arguments but only one expression.
+    lambda arguments: expression (Any number of arguments but only one expression)
+    double = lambda x:x*2
+    divisble = lambda x:x%2 == 0
+  filter functions
+    filter(function,iterable(list,tuple))
+    filter takes the first argument as function and second argument as a list
+    it returns a filter object where the function evaluvates to true for the objects in the list
+    my_list = [1, 5, 4, 6, 8, 11, 3, 12]
+    new_list = list(filter(lambda x: (x%2 == 0) , my_list))
+  map function
+    map(function,iterable(list,tuple))
+    map takes the first argument as function and second argument as iterable 
+    it returns a map object where the function is applied to all the values in the list 
+    my_list = [1, 5, 4, 6, 8, 11, 3, 12]
+    new_list = list(map(lambda x: x * 2 , my_list))
+  reduce function--Reduces to a single value
+    Not coming within
+    from functools import reduce
+    returns a single value
+    reduce works by applying the function for first and second object in iterable and then the result to third etc
+    my_list = [1, 5, 4, 6, 8, 11, 3, 12]
+    a = reduce(lambda x,y:x+y,mylist)
+ self(https://www.geeksforgeeks.org/self-in-python-class/)
+    https://www.programiz.com/article/python-self-why
+    to refer the current instance of the class.
+    should be passed as a first parameter in methods.
+    Used for identifying the variables used in class for local and global scope
+    Used for variables across fucnitons inside a class.
+    self is not a reserved word. Anything can be used instead of it.
+ init--constructor
+    reserved mehtod in python
+    This method is called when an object is created from the class 
+    To allocate memory for the object and variables in heap space
+    always executed when an object is created for assigning memory and values.
+    Use this to assign values for the variables
+ generators
+    Way of creating iterators which returns one at a time
+    Yield. Function doesnot stop after returning the value.
+    there is no need to explicitly use iter function
+ iterators(https://www.programiz.com/python-programming/iterator)
+    they are the objects which can be iterated upon. eg: list,tuple etc.
+    used __iter__ and __next__ and stopiteration statement
+    for loop is implemented using the same method ( Using a while loop)
+ GIL(Global interpreter lock)
+    multi threading in python
+    Python to execute in multiple threads. Each thread will have a lock to hold the python interpreter
+ while loop
+    https://realpython.com/python-while-loop/
+ inheritance
+    super class/base class/parent class
+    sub class/derived class/child class
+    if derived class doesnot have an init method, it will use the init method of base class
+    Lets say if a derived class overirde a function 'abc' from base class then if i need to use the abc of base class in derived class then we can use super.abc()
+ Polymorphism (Same function can be used for multiple purpises for eg : len to be used for finding length of stirng and integer)
+    https://www.geeksforgeeks.org/polymorphism-in-python/
+    a parent class can have a function 'abc', the same function can be available in child class which can take different parameters and method definition
+ encapsulation
+    everyhing binded together. class is an example of encapsulation
+ abstraction
+    through implmentation of abstract class
+ python--call by object reference - https://www.geeksforgeeks.org/is-python-call-by-reference-or-call-by-value/
+    is not pass by value or not pass by reference it is pass by object reference
+    for mutable objects like list we can say that it is pass by reference as it changes the value
+    for non mutable like int,tuple etc, it is pass by value as we cannot change the value
+    a = 2
+    b = 2
+    id(a) == id (b) - This is true because its the same object 
+    a = [1,2,3]
+    b = [1,2,3]
+    id(a) == id(b) - This is false becuase list are immutable objects
+ .join
+    Join all items in a tuple into a string, using a hash character as separator
+ class variable(outside of any functions in a class which can be used common to all objects) and instance variables(inside the init method)
+ multiprocessing and GIL problems
+ try,except and finally block
+ zip function in python
+    Joins 1 or more iterators and returns a zip object which contains tuples
+    a=[1,2,3]
+    b=[4,5]
+    for each in zip(a,b):
+        print(each)
+    (1, 4)
+    (2, 5)
+ range(3,5) - Gives only 3 and 4. 5 is not included
+    range(len(a)-1,-1,-1):
+        range can go backwards. So here first parameter is lenght of list-1 , upto -1 and the offset -1 
+        this can be used to reverse a list which is a common scenario
+ boto3 framework: for loading data into s3
+    2 distinct way of accessing the AWS resources (client and resource)
+ functions
+    functions are first class objects
+    functions can be assigned to a variable
+    functions can be defined inside a function
+    a function can be returned in a function
+    functions can be passed as an argument.
+    def a:
+        return 1
+    when we call a() - the function executes. we can assign b = a
+    docstring in funcitons
+        inside ''' and help(fun) gives the result
+ETL
+ Steps of DW implementation : https://addepto.com/implement-data-warehouse-business-intelligence/
+    business and technical strategy
+    identify the business problem
+    identify the source systems required and how can we bring the data 
+    identify what kind of system and technical stack is best suited for the use case 
+        different Environment for dev,testing and production
+        data modelling 
+            star or snowflake in dimensional modelling 
+            ETL process 
+        visualization 
+            access data for adhoc,predefined reports etc 
+        enough security and control 
+            RBAC 
+        Performance tuning 
+    best way to teach the business users 
+    best way to recover in case of data loss. 
+ dimensions : context/attributes/qualitative data (what/when/how of fact) 
+    conformed https://www.nuwavesolutions.com/conformed-dimensions/
+        dimension can be used across many fact tables in different subject areas of the warehouse
+        date
+    role playing
+        date
+    junk dimensions
+        sex,maritalstatus
+    degenerate dimensions(https://www.nuwavesolutions.com/degenerate-junk-dimensions/)
+        dimensions that doesnot have any dimensional attributes like invoice number,sim number etc.
+        If we include invoice as a different dimension then the dimension will also grow similar to fact and it will have performance issue 
+    type 1,2,3
+    static dimensions
+        not from any source. can be manually created and loaded.reference tables.
+    inferred dimensions
+        missing dimensions
+    shrunken dimension
+        a dimension created at a lower granularity from a higher for eg: month_dimension from date_dimension
+        http://mohitleekha.blogspot.com/2018/09/shrunken-dimension-very-useful-for.html
+    Outrigger Dimensions
+        http://mohitleekha.blogspot.com/2018/07/what-is-outrigger-dimension-and-its.html
+ facts : quantitive data/measures/metrics that can be aggregated/summarized 
+    factless facts
+        table doesnot have any measures.
+        Dimensionsal keys which defines the transactions.
+        eg: student attendance
+            event captruing factless fact
+                not answer the negative cases. Only positive cases.
+            coverage factless fact
+                answer all the cases. so there will be an additional flag to say whether its Y or N
+    additive facts (Can be used across any dimensions)
+        sale by product,store,date
+    semi additive facts (Can be used only with certain dimensional attributes)
+        bank balance for each account
+    non additive facts (Cant go for any kind of aggregations like percentage etc.)
+        profit margin by bank account
+    transactional fact
+        same as source. if any updates for old data then it will be updated here as well. Some memory will be lost.
+    snapshot fact
+        frozen data. there will be a snapshot date and it will be used for reporting.
+    snapshot accumalted fact
+        different dates in the same row of the table.
+        https://www.holistics.io/blog/the-three-types-of-fact-tables/
+    bridge tables
+        https://www.sqlshack.com/replace-bridge-tables-data-warehouse-sql-server-2017-graph-database/
+        (https://www.leapfrogbi.com/bridge-tables/)https://www.youtube.com/watch?v=pZOlrIljnbs
+        Those tables that are brought to resolve many to many relationship between fact and dimension.
+        https://www.nuwavesolutions.com/bridge-tables/
+        Fact may be at patient level, Dimension can be at diagnosis level
+        Association table 
+        Student to Course (A student can have multiple course and a course can have multiple students)
+        So the primary keys from both table are stored in the bridge table and used for joining.
+ kimball and bill inmon model(https://www.astera.com/type/blog/data-warehouse-concepts/) https://tdan.com/data-warehouse-design-inmon-versus-kimball/20300
+    Common features 
+        Both considers DW as a single repository for reporting
+        Both use ETL to load data
+    Distinction 
+        how data structures are modeled,loaded and stored in DW 
+        This distinction impacts the:
+            initial delivery time of DW 
+            ability to accomodate future changes in ETL design  
+    Top down
+        bill inmon modelling
+        Begins with corportate data model
+            Identifies the key areas of business
+            A detailed logical model is built for each key area(ER model)
+            Normalized(So less data corruption as the data is not redudant)Data redundancy is avoided 
+            Then the physical model is implemented which is also normalized 
+            This DW acts as unified source of truth 
+            Normalizing makes the data load less complex ( as there is no redundancy) but querying would be hard as lot of joins
+            Build datamarts from this DWH and the datamarts can be denormalized
+            DWH is the source for datamart ( this make sure integrity across diff departments)
+        ER model
+        Prelimenary set up and time is more as en tire DW needs to be implemented.
+        uses dimensional modelling in building datamarts to ease up querying
+            The DW acts as source for datamarts
+        Less corrupt as the data is normalized 
+        Advantages:
+            DW is the single source of truth hence integrity across all departments 
+            Data update anomalies are avoided because of no redundancy. Makes ETL process easier.
+            Logical model clearley represents full business
+            very flexible : When source data changes, there is only one place that needs to be updated.the DW 
+            can handle various reporting needs of org 
+        Disadvantages
+            More joins hence complex to implement
+            Need team who are good in modelling and implementation
+            Initial set up delivery time is delayed 
+            More ETL work is needed as the datamarts needs to be implemented from DW 
+    bottum up
+        kimball model
+        Build datamarts. Load the data into relational staging layer and then load to dimensional layer.
+        Denormalized-star-conformed dimensions
+        Enterprise bus matrix
+        mission critical
+        Advantages:
+            Quick to set up and build 
+            star schema is easy to understand
+            Peformance is good as denormalized and less joins
+        Disadvantages:
+            No single source of truth
+            Redundant data can cause update anomalies 
+    when to go for each?
+        Reporting needs : If org wide reporting then Inmon else kimball 
+        Project deadline : Inmon takes more time due to normalization.
+ data modelling
+    ER model:
+        Entity specific
+    Relational:
+        table specific
+        This model is for adding,updating and deleting records in an OLTP system
+        https://www.techopedia.com/definition/25113/relational-database-design-rdd
+        normalization,ACID - Atomicity, Consistency, Isolation and Durablity https://www.geeksforgeeks.org/acid-properties-in-dbms/
+    Dimensional(faster retrieval of the data) :
+        The purpose of dimensional modeling is to optimize the database for faster retrieval of data
+        Developed by Ralph Kimball 
+        Fact and Dimensions
+        steps:
+            identify the business problem 
+            identify the sources of data required 
+            find the granularity of tables to be maintained 
+            identify dimensions and attributes needed on it 
+            identify facts 
+            use star schema or snowflake schema 
+        https://www.guru99.com/dimensional-model-data-warehouse.html
+    Columnar:(cold analytics)
+        https://www.stitchdata.com/columnardatabase/
+        good for analytics read only/ read only few blocks/ better compression
+        Columnar is not good if we have more writes than reads/ or selecting lot of columns from table for analytics 
+    Operational intelligence (Druid): Analytics on fly/near real time 
+        https://www.rilldata.com/blog/when-should-i-use-apache-druid
+        When the scenario is you are running lot of queries in a month then druid helps in reducing the cost per query
+        Druid optimized by segmenting the data based on time 
+    Intention is to create tables,columns,data types,constraints(notnull,unique etc),primary key,referential integrity
+    Dont create the other objects like views,sequences,MV's etc in a hurry.
+    discuss with DBA and chief architect
+    Different type of data models (https://afteracademy.com/blog/what-is-data-model-in-dbms-and-what-are-its-types)
+        https://online.visual-paradigm.com/knowledge/visual-modeling/conceptual-vs-logical-vs-physical-data-model/
+        conceptual schema : Done by business analysts.
+            Entities and attributes and relations
+            for business audience
+            not considered from a DBMS standpoint.
+        logical schema : Done by BA and designers
+            not considered from a dbms standpoint
+            eg: Just mention datatype as string not varchar or text
+        physical schema: Done by developers
+            considered from a DBMS standpoint
+            Proper datatype(varchar,nvarchar)
+            primary key and foreign key
+    best practice
+        correct datatypes for making sure space is not wasted.
+            https://medium.com/@mayuribudake999/difference-between-decimal-and-float-eede050f6c9a#:~:text=Float%20is%20a%20single%20precision,bit%20floating%20point%20data%20type.&text=Decimal%20accurately%20represent%20any%20number,cannot%20accurately%20represent%20all%20numbers.
+            https://www.w3schools.com/sql/sql_datatypes.asp
+        decimal vs double vs float : http://net-informations.com/q/faq/float.html
+            Float - 32 bit (7 digits)
+            Double - 64 bit (15-16 digits)
+            Decimal - 128 bit (28-29 significant digits)---most precision,used for monetary stuffs,performance is lower compared to float and double 
+        primary keys
+        foreing keys/referential integrity
+        granularity of data
+        date time formatting
+        clustered indexes(https://www.sqlshack.com/what-is-the-difference-between-clustered-and-non-clustered-indexes-in-sql-server/)
+            clustered index has to maintain the physical order of the stored records according to the indexed column 
+        non clustered indexes
+        paritions and subpartitions
+        constraints(check,unique etc)
+ star schema/snowflake schema(https://www.xplenty.com/blog/snowflake-schemas-vs-star-schemas-what-are-they-and-how-are-they-different/)
+    (Better data organization/Better data processing)
+    star schema 
+        denormalized
+        takes more space due to data redundancy
+        Good for datawarehoue
+    snowflake
+        normalized
+        takes less space
+        queries will be complex
+        maintainiblity as tables are more.
+        Good for datamart 
+    When to go for what?
+        Peformance: star schema because of the denormalized however snowflake inludes joins and all.
+        Readablity : star schema because of less number of tables
+        space occupied : more in star as the data redundancy can happen.
+ ETL vs ELT https://www.xplenty.com/blog/etl-vs-elt/
+    ETL: 
+        datawarehouse
+        datasource to staging to datawarehouse 
+        Helps with privacy(GDPR,HIPPA) and cleaning data before loading to DW
+        DW's need to be relational SQL based. So any other format should be converted into relational format before loading to DW.
+        ETL allows for speedier, more efficient, more stable data analysis(reporting) as the data become structured through ETL process. 
+        old concept - 20 years 
+    ELT : 
+        datalake 
+        datasource to datawarehouse (DW does the basic trasnformation)
+        All data is uploaded as is and it may cause compliance issues
+        All data(structued,semi structured,unstructured) available in raw format in datalake 
+        ELT is not ideal for speedy analysis as the data is not structued
+        New concept because of cheap storage and MPP processing capablities(Redshift,bigquery)
+            ingest anything and everything
+            transform only the data you need. 
+            ELT is cloud based and hence less maintenance
+SQL NULL isn't equal to anything
+ case
+    count (case when a=india then 1 else o end as)
+ 111nullnull and 111 (join,left,right)
+ count https://www.mssqltips.com/sqlservertip/4460/sql-server-count-function-performance-comparison/
+    count(*) : Gives total records (DISTINCT DOES NOT WORK WITH THIS) Will include null values.
+    count(1) : just a literal... The query will count the rows in the smallest nonclustered index to minimize the I/O required.it has nothing to do with the 1st column.Will include null values.
+    count(column_name) : Does not include null values. If the table is a not null column then it will convert to count(*)
+    if just want to know the count of records in table : check the metadata tables - But use count itself if you need to find it based on filter/partition 
+ type of joins 
+    https://www.oracletutorial.com/oracle-basics/oracle-joins/
+    https://www.oracletutorial.com/oracle-basics/oracle-cross-join/
+ joins(https://logicalread.com/oracle-11g-hash-joins-mc02/#.YEn4FF0zZ6E) https://www.youtube.com/watch?v=pJWCwfv983Q
+    nested loop join
+        For one record in the outer query, it checks the entire table of inner query.
+        It does not stop at the first meet as there can be records at the bottom so it always goes for full table scan of the inner table 
+        Performance wise not at all efficient.
+        cartesian product and filter on join predicate
+    merge sort join (Only for equi joins): https://logicalread.com/oracle-11g-sort-merge-joins-mc02/#.YNbw-JMzaWs
+        Performance efficient than the nested loop join.( but sorting is slow so it may cause a problem)
+        the sql engine sorts the data based on the join column in both the tables and do the comparison
+        sorts the data on source and target table based on the join column
+        and then look one by one from the outer to inner table and get the match. Whenever a match is not there, it stops 
+        Temporary segments needed = Sort area memory is needed as both the tables needs to be sorted
+        Effective when both row sources are quite large 
+    hash join (Only on equi joins) https://asktom.oracle.com/pls/apex/f?p=100:11:0::::P11_QUESTION_ID:3109440977616
+        Uses a hash function to create a hash value for the first table  
+        This is the choice of optimizer when the memory is set to accomodate them.
+        the joining column for the smaller table is taken first and goes for a full table scan and then creates hash table on memory.
+        hash tables cant take the advantage of indexes on the second table 
+        the larger table is gone for a full table scan and check against the hash table in the memory.
+        When using an ORDERED hint, the first table in the FROM clause is the table used to build the hash table.
+        optimiser takes this if the number of distinct values are less.
+        this is similar to nested loop join except that the hash table is created in memory and then used to traverse. 
+            In nested loop join, its not happening in memory and has to travel the b tree
+    optimiser compares the cost of the joins and select the one having lowest one.
+ subquery
+    corelated subquery https://www.geeksforgeeks.org/sql-correlated-subqueries/
+        outer and inner are related.
+        inner query executes for each row of outer query
+        suggested only if the inner query table is having less number of records.
+    non corelated subquery
+        outer and inner are not related. For eg: a direct IN.
+        inner executes first, get the result and outer query uses it.
+ clustered and non clustered index
+    clustered index-physical arrangement of data
+    A clustered index defines the order in which data is physically stored in a table. 
+    a non-clustered index is stored at one place and table data is stored in another place
+ paritions
+    List paritions
+        Normally empid=2 etc 
+    Range paritions
+        Normally from 1-jan to 31-jan etc 
+    Hash paritions(https://www.techopedia.com/definition/31996/hash-partitioning)
+        Randomized way when there are no enough keys to partition
+        No performance benefits as the data is randomly divided (https://orahow.com/hash-partitioning-with-examples-in-oracle/#:~:text=Hash%20partitioning%20is%20a%20partitioning,number%2C%20customer%20ID%2C%20etc.)
+        But better way to manage the data 
+    Advantages:
+        Better peformance/partition elimination
+        Better managablity: Manitenece like backup activities
+        Availablity: Can create different partitions in diff tablespaces and if one goes down other and not affected.
+    Disadvantages
+        If the table is partitioned and if an index rebuild is fired, then its going to take lot of time
+ index/Reindexing https://www.databasejournal.com/features/oracle/article.php/3739071/Oracle-Indexing---What-Where-When.htm 
+  https://severalnines.com/database-blog/overview-mysql-database-indexing
+  In summary
+    consider how much data will be retrieved from each of the tables;
+    how selective(cardinality) the indexes are;
+    how frequently the indexed columns are queried compared to the frequency of update of the same columns before deciding whether or not to use an index.
+    For b-tree indexes, the fewer rows being selected by the query, the bigger the performance increase would be.
+    Generally if you're reading a small percentage (1-10%) of a very large table, your Oracle database will have much better performance if the data is accessed
+    via an index scan of a b-tree index followed by table lookup, rather than a full table scan.
+    If a query will access more than 1-10% of the table then a full table scan may produce better performance but you would need to test this under real-world conditions. One last thing to remember is that the more indexes there are then the longer updates and inserts will take.
+  full table scans
+    if the table is small better to go full table scan. Index will create unnecessary I/O
+    if the table is large and we are selecting more than 10% of records then go for full table scan.(Also should be sorted based on that column)
+  More indexes are ideal if the database is mostly read only.
+  Index is not recommended as it occupies space
+  Index includes lot of lookups like throgh couple of nodes to reach the leaf node and then a lookup to the actual row. So sometimes full table scan is good.
+  Index should be the column used in limiting conditions such as WHERE, JOIN , ORDER by and GROUP by conditions
+  Index drawback is when records are updated/deleted on index column, the index also needs to be modified. So additional I/O
+  When we define a table and load records, it will be inserted in any order, so running a select/delete/update queries takes time
+   so if an index is defined on a column, data will be sorted in that data structure with the address of the same.
+   so performance is much better.
+  bit map index
+    Good for columns with low cardinality and used frequently in the queries ( suited for DW/analytical purpose)
+    effective only when there are lot of columns with bitmap index
+    Why low cardinality :  because of the way the data is stored for a bit map index.
+    the column should be infrequently updated as updating bitmaps take lot of time.
+    the data is stored as 1100010101 : so bitmap index can be easily compressed and hence space occupied is less.
+    Using boolean logic by optimizer and get the records : It will be easy to get the records.
+    null values are not included in balanced and included in bit map.
+    drawback : kills write concurrency as it will block the entire rowid range while transaction is in progress.
+               So it is suggested to those tables that have only one process writing to it.
+  balanaced tree index
+    Its balanced so that all the leaf nodes are at the same level. Its the default index.
+    Effort taken : o(log n)
+    multiple lookups, one for various nodes and the leaf node of the index, and then the table row itself.  That's why Oracle's optimizer will choose in certain circumstances to do full table scans rather than index lookup, because it may actually be faster
+  hash index (https://hakibenita.com/postgresql-hash-index) (https://www.youtube.com/watch?v=MfhjkfocRR0)
+    create a hash table with hash value of column and pointer to the location.
+    only equality operator workes. < or > on this column will not work.
+    hash(key) - It gives an index value and its stored in that bucket. 
+    For different keys it can be same index value and then it results in hash collision and it is fixed by linking the arrays 
+    The good thing is when someone searches it only looks for that particular index array (linked) to get the value
+    https://www.mssqltips.com/sqlservertip/3099/understanding-sql-server-memoryoptimized-tables-hash-indexes/
+  function based indexes.
+    a function is applied on the index and it should be used in query as well.
+  reverse key indexes 
+    data with lot of first part is same but end is not same...like rest a,rest b,rest c...etc 
+ merge
+    MERGE TargetProducts AS Target
+    USING SourceProducts	AS Source
+    ON Source.ProductID = Target.ProductID
+    -- For Inserts
+    WHEN NOT MATCHED BY Target THEN
+        INSERT (ProductID,ProductName, Price) 
+        VALUES (Source.ProductID,Source.ProductName, Source.Price)
+    -- For Updates
+    WHEN MATCHED THEN UPDATE SET
+        Target.ProductName	= Source.ProductName,
+        Target.Price		= Source.Price;
+ coalesec,nvl 
+ typecast
+ analytical functions https://towardsdatascience.com/top-5-sql-analytic-functions-every-data-analyst-needs-to-know-3f32788e4ebbs
+    sum(Revenue) OVER (PARTITION by DepartmentID
+    ORDER BY YEAR
+    ROWS BETWEEN CURRENT ROW AND 3 FOLLOWING)
+   
+    sum(Revenue) OVER (PARTITION by DepartmentID
+    ORDER BY YEAR
+    ROWS BETWEEN 1 PRECEDING AND 1 FOLLOWING)
+
+    dense_rank
+    rank
+        SELECT col, RANK() OVER (ORDER BY col) my_rank
+        FROM 
+	    rank_demo;
+    first_value 
+    last_value
+    lag
+    lead
+    rank 
+    row_number 
+ non aggregate window functions
+    Lag and lead
+        collide: https://www.geeksforgeeks.org/mysql-lead-and-lag-function/
+ index only tables - oracle reads data only from index and not from tables
+ oracle architecture
+    data blocks - extends - segments - table spaces
+ exist and in
+    exist stop at the first iteation of true.
+ plsql
+ with clause/common table expression
+    reusable,no need to repeat the same set of query multiple times
+    simple and easy to read.
+    temporary tables.
+    eg: employee,deptcount, manager,dept count.
+ inline view
+    subquery
+    inline processing, nothing like a temp table.
+    will have to declare the same thing multiple times.
+    select * from (select * from b where b.age-=12) a where a.salary=100
+ explain plan
+    explain plan for <<query>>: syntax in oracle
+    https://blogs.oracle.com/optimizer/how-do-i-display-and-read-the-execution-plans-for-a-sql-statement
+ optimizer  http://www.dba-oracle.com/concepts/tables_optimizer_statistics.htm
+    query->server->cost based optimizer->look at the stats->get the explain_plan
+    http://www.dba-oracle.com/t_oracle_analyze_table.htm
+ hints
+    Alter execution plans
+ queries 
+    https://artoftesting.com/sql-queries-for-interview/amp
+    https://artoftesting.com/sql-queries-for-interview/amp#SQL_Query_Interview_Questions_for_Experienced
+    odd/even 
+        mod(10,2) = 0 and mod(10,3) =1 : returns the remainder 
+    delete duplicates
+        In oracle:
+            For any DB :if ID is present : delete a from dup_test a,(select max(id) id,name,sal from dup_test group by name,sal) b
+                                            where a.id != b.id
+                                            and a.name = b.name
+                                            and a.sal = b.sal
+            For oracle : if ID is not present (using rowid): delete from table where rowid not in (select max(rowid) from table group by primary keys/natural keys) 
+            Without ID in table but delete the duplicate including original : delete t1 from table t1 ,(select rank() partiiton by natural keys, * from table) b where a.natural_key = b.natural_key and rank > 1 
+            if ID is present : DELETE n1 FROM names n1, names n2 WHERE n1.id > n2.id AND n1.name = n2.name ( where the table got column id ) -- if there is a ID and its different (primary key)
+        if there is no primary key:
+            if you want to retain duplicates one occurance: then use temp table
+            if you dont want to retain the duplicates occurance : then use row num and delete based on cols and row num > 1 
+                delete b from
+                (select row_number()  over (partition by a,b,c) rn,a,b,c
+                from dup_del)a, dup_del b where  a.rn > 1
+                and a.a = b.a and a.b = b.b and a.c = b.c
+        Use rownumber and find whose row number is greater than 1 and delete
+        Use a temporary table and delete if there are no incrementing columns
+    select duplicates
+        select and group by based on natural keys and using count(*) > 1
+    SELECT * FROM `members` LIMIT 1(offset), 2(limit);
+        start from the offset + 1 and give 2 records 
+    exist
+    in
+    Find 3rd salary using corelated subquery
+        1) SELECT id,salary from salary e1 where
+           4-1 = (SELECT COUNT(DISTINCT salary)from salary e2 where e2.salary > e1.salary)
+        2) select * from salar order by salary desc limit 1,2
+    Find records which starts with any 2 characters followed by hn 
+        SELECT FullName
+        FROM EmployeeDetails
+        WHERE FullName LIKE ‘__hn%’;
+    User defined variable in mysql -- https://www.javatpoint.com/mysql-variables
+        SELECT *
+        FROM (
+        SELECT *, @rowNumber := @rowNumber+ 1 rn
+        FROM employ
+        JOIN (SELECT @rowNumber:= 0) r
+        ) t
+        WHERE rn % 2 = 0;
+    mod function = if mod(id,2) = 0 then even else odd 
+    connect by : prints numbers from 1 to the level
+        SELECT level x
+        FROM dual
+        CONNECT BY LEVEL <= 999
+    pivot 
+        Transpose without pivot : https://stackoverflow.com/questions/52394901/sql-case-when-data-displayed-on-separate-rows-after-transposing
+        https://www.techonthenet.com/oracle/pivot.php
+    mean(Average) median(The middle one) and mode(Most occuring one) 
+        https://www.statisticshowto.com/probability-and-statistics/statistics-definitions/mean-median-mode/
+        https://blogs.lessthandot.com/index.php/datamgmt/datadesign/calculating-mean-median-and-mode-with-sq/#:~:text=The%20median%20for%20this%20data,middle%20of%20the%20data%20set.&text=The%20mode%20for%20a%20data,of%20times%20a%20value%20appears.
+    running totals
+        https://stackoverflow.com/questions/2120544/how-to-get-cumulative-sum
+        https://codingsight.com/calculating-running-total-with-over-clause-and-partition-by-clause-in-sql-server/
+    group by vs having 
+        https://www.geeksforgeeks.org/having-vs-where-clause-in-sql/
+    self join 
+        https://www.sqlservertutorial.net/sql-server-basics/sql-server-self-join/
+    Left join with ON and WHERE 
+        https://searchoracle.techtarget.com/answer/LEFT-OUTER-JOIN-with-ON-condition-or-WHERE-condition
+        https://dba.stackexchange.com/questions/143090/mysql-left-join-not-working-as-expected
+    count and sum https://learnsql.com/blog/difference-between-count-distinct/
+        count is used to return the number of NOT NULL VALUES in the column 
+        sum gives you the total value 
+        COUNT(*) returns the number of rows that fulfill a specified condition (WHERE x or HAVING y) in a table.
+        COUNT(column_name) returns the number of rows in a table the value in which the particular named column is not Null. It is equivalent to
+Redshift (Postgresql8 + Columnar)  https://towardsdatascience.com/amazon-redshift-architecture-b674513eb996 https://hevodata.com/blog/redshift-architecture/
+    https://www.dataliftoff.com/making-sense-of-amazon-redshift-pricing/
+    https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-clusters.html
+    Cluster = 2/more compute nodes + Leader node (all clients and applications to leader node)
+    dc2large/dc28xlarge : ds2xlarge/ds28xlarge : ra4 
+    leader 
+        Manages all external and internal communication
+        Prepares query execution plan and it distributes it to compute nodes
+        Distribute to compute node only if it needs to access the data stored in compute nodes
+        If not it executes on leader node itself like information_schema etc.
+    compute
+        responsible for actual execution + have data stored in it
+        It exeuctes and gives the result back to leader node 
+            Dense compute = Using SSD and give importance to performance 
+            Dense storage = Using HD and give importance to storage
+        Slices
+            Each compute node consist of multiple Slices
+            Consist of memory + harddisk for processing query 
+            These slices work in parallel to get the result
+            Data distribution among slices depend on the distribution key used for the table 
+                Even distibution helps in parallel processing of all the slices and benfit performance
+            Number of slices per node depends on the type of node 
+ copy command 
+    manifest file can be used to maximize the parallel processing
+    quickly load the data from s3 into redshift
+ unload command
+    Quickly load the data from redshift to s3 
+ Architecture
+    MPP (because of slices of compute nodes)
+    Reduced I/O (becuase of columnnar storage) = Only load the needed column to the memory and not the entire row 
+    Better compression because of columnar = So data can be loaded to memory fast and quick processing 
+    Horizontally scalable
+    Redshift is suggested if most things are on AWS
+    Redshift query optimizer generates query plan that are MPP aware and considering columnar storage 
+ Redshift vs snowflake https://www.xplenty.com/blog/redshift-vs-snowflake/
+    https://www.alooma.com/answers/why-did-you-choose-snowflake-over-amazon-redshift-for-your-cloud-data-warehouse#:~:text=With%20Redshift%2C%20it%20is%20required,this%20out%20of%20the%20box.&text=With%20Snowflake%2C%20switching%20data%20warehouse,to%20scale%20up%20and%20down.
+    Usually suggested to have redshift if for long term commitments.For starters better to have snowflake
+    One main difference is compute and storage nodes are seperated in snowflake but in combined in redshift.
+    can use spectrum if the data resides on s3 at a very less cost
+    https://blog.getcensus.com/snowflake-vs-redshift-just-choose-snowflake/
+        sharing of data is super simple in snowflake 
+ distribution keys https://hevodata.com/blog/redshift-distribution-keys/
+    This determine where the data is stored in redshift
+    To avoid storage of data in single node and use the parallel processing.
+    If not distributed properly, then redistribution happens during execution and result in more execution time.
+    Good choice is to select a column with high cardinality like timestamp.
+    Even distribution
+        Evenly distributed across the slices using round robin approach.
+        use: if table is not used in joins(Table is highly denormalized) so that each node can work on query and give result. No need of data transfer btwn nodes
+    Key distribution
+        All records with the same entry will go in the same slice.
+        use: if tables are used in joins. For a large dimension like customer, the distribution key is the join key used between dim and fact.
+            Make sure the other table to also use the same key distribution
+    ALL distribution
+        The table copy is maintained in all the compute nodes.
+        Adv : No need to copy data across the nodes and hence I/O is not needed.
+        DISAdv : More space utilization and takes more time while inserting as the data needs to be inserted multiple nodes.
+        use : For small tables that often dont change
+ sort keys (https://www.blendo.co/amazon-redshift-guide-data-analyst/data-modeling-table-design/understanding-selecting-sort-keys/)
+ https://hevodata.com/blog/redshift-sort-keys-choosing-best-sort-style/
+   how data is stored within the tables in the nodes.
+   During this sorting, metadata is also generated. min and max values for each block is stored and can be accessed without iterating full block.
+    This metadata is passed to query optimezer and it generates good plans based on it. 
+   It helps in filtering a major chunk of data during processing 
+   compound sort key
+        sort data by first key and then second key
+        So performnace is better only when there is a filter condition on first key
+        Use : when queries filter on multiple columns.Primary sort column is always used in where clause.
+              queries that use group by, order by etc.
+              Use it when there is a need of more than 1 column as sort key and table is small 
+   interleaved sort key
+        If more than one sort key then the data will be stored considering both keys.Give weightage for all the sort keys.
+        if where caluse is having more selective
+        Go with interleaved if table is huge 
+    Does not sort the data on the fly. Vaccum needs to be done to do it
+        When records are inserted its inserted into an unsorted block and then it sorts when vaccum is done
+ columnar storage
+    Data stored in data blocks as column wise and not row wise.
+    So for selcting a specific column, we need to access only certain data blocks.
+    In row storage DBMS, while selcting data, it unwanted selects 95% of data resulting in unwanted I/O
+ MPP processing
+ best practices
+    Correct column data type and compression to reduce I/O and space.
+    Correct distribution keys to distribute data properly across nodes
+    Correct Sort key to sort the keys within data (https://www.blendo.co/amazon-redshift-guide-data-analyst/data-modeling-table-design/understanding-selecting-sort-keys/)
+    Update the stats(number of cols,dis keys etc) so that optimizer can select a good plan for execution
+        https://docs.aws.amazon.com/redshift/latest/dg/t_Analyzing_tables.html
+        Stats are outdated when new inserts/deletes happen on a table 
+        to update the stats in 1 MB Redshift block to have the latest maximum and minimum values.
+        (Zone map is a datastrucutre used for storing this maximum and minimum value)
+    Vaccum : https://www.blendo.co/amazon-redshift-guide-data-analyst/maintenance/vacuum-amazon-redshift/
+        redshift doesnot reclaim the free space automatically
+        to free up space and reorder the data after updates and deltes.
+        It also sorts the data in the table
+  cons
+    Doesnot enforce primary key so we have to implement the feature in our process to avoid duplications.
+    Need to select correct distribution keys and sort keys
+    analyze and vaccum needs to be done most times and its a time consuming process (https://www.blendo.co/amazon-redshift-guide-data-analyst/maintenance/vacuum-amazon-redshift/)
+     (https://hevodata.com/blog/redshift-vacuum-and-analyze/)
+      Redshift doesnot reclaim and reuse free space automatically ( whenever delete or update happens)
+      Vaccum reclaims this free space and sorts the data in the table
+      During delete, the rows are marked for deletion but are actually not removed. The query processor needs to scan all the deleted records as well.
+      vaccuming is an I/O intensive process.
+      What does analyze do = Update the stats of the table so that query optimizer can give better plans.
+                             Stats include collecting of table size,distribution style,sort style etc
+      When to do the vaccum : When table is having more than 10 percent of unsorted data 
+      Types of vaccuming
+        Vaccum full(Default) : reclaim space + sort data 
+        vaccum delete only : reclaim space + doesnot sort the data 
+        Vaccum sort only : Sort data and no reclaim
+        Vaccum Reindex : Reclaim + sort + reindexing of interleaved data
+  on-demand/Reserved instance of redshift
+  DB instance : ds2.xlarge=dense storage ,dc1.large=dense compute
+Apache Kafka
+    More servers and hence more data pipelines are required.
+    Reduces the complexity of data pipelines
+    Kafka cluser is composed of multiple brokers (Each broker is a server) Its a bootstrap server. so connected to one means connected to everyhing
+    Each broker is identified by ID (Integer).
+    Each broker contain certain topic partitions
+    Topic replication factor: should be more than 1. Ideally 3. If 2 then the partition will be available in 2 brokers 
+    1 broker is leader for a parition and the other is ISR (in synch replica). Leader and ISR is determined by zookeper
+    Components
+      Topics
+        parition0
+          offset(meaningful only for within partition)
+        parition1
+          offset
+        partition2
+          offset
+        once the data is writtein into a partition. Its immutable. It cant be changed.
+      Producers
+        Round robin
+        Acknowledge (0,1,all)
+        Key 
+      Consumers
+        Consumer group - Gorup of consumers. One partition will go only to one partition
+        Choose when to commit Offset
+          atmost once 
+          atleast once 
+          exactly once 
+    Messaging systems
+      Queued = Each record goes only to one of them 
+      PubScru = Publish subscribe where all the consumers receive it
+    Fast,Scalabe,Durable
+    Architecture
+    Topics
+        partitions
+    Brokers
+    Producers
+        ACK
+    Consumers
+        Offset
+    Schema registry
+Apache Spark
+    Architecture
+    https://www.simplilearn.com/top-apache-spark-interview-questions-and-answers-article
+Apache Airflow
+    How airflow is deployed 
+        We have defined a docker file with airflow version and requirements file which mentions the packages needed on it
+        This docker file is build and we will have the image available 
+        This will be used as our airflow image
+        So it wont download everytime..whenver there is a need of additional packages or something.
+        And its stored in harbor container solution which is compatible with EKS 
+        Then we use helm charts and then airflow pods will be up
+    Architecture https://www.qubole.com/tech-blog/understand-apache-airflows-modular-architecture/
+        webserver (api over internet) ( API endpoint )
+            UI-visualizing dags
+            monitoring dags 
+            Add new user,create new role,assign a user a new role etc for airflow
+            API endpoint : provides a set of REST API's for triggering dags, getting status of tasks etc 
+            can handle variables,users,connections etc 
+        scheduler
+            orchestrates the DAG's and their tasks and checking the interdependenices
+            scheduler always checks in the DAG Folder for details  ( by setting scheduler parser interval )
+                so make sure to include all code inside operators and not in DAG folder
+            Looks at the schedules and send it to executor 
+            if config is set up, make sure that one dag is not triggered twice etc 
+            scheduler heartbeat second : this can be used in airflow cfg file to check the dag folder for any changes/tasks 
+        executor 
+            the components that actually executes  the task 
+            Based on the below executors it sends to workers
+            How it works:
+                1)metadata database keep track of status of tasks.
+                2)scheduler looks at the metadata database and see what needs to be executed.
+                3)Executor works closely with scheduler to which resources(workers) can complete those tasks.
+            https://www.astronomer.io/guides/airflow-executors-explained
+            Local executor
+                parallelism on a single node.
+                Good for testing, single node. cheap and resource light
+                running an executor on a single ec2 instance 
+                not scalable and not good for heavy workloads
+                if the single machine goes down for some reason, then it will have to wait till the machine is back up and running.
+                the performance depends on how the machine is
+            Celery executor (high Availablity)
+                Horizontal scalable
+                For running in a distributed fashion
+                Works with a pool of indepenednt workers across which it can delegate tasks 
+                So scheduler sends a message to queue and celery broker sends it to one of the workers
+                Will need an underlying database redis/rabbitmq ( for scheduler tpo assign it to workers)
+                Good for production Environment
+                Expensive as worker needs to be up for most time (the pool of the workers will be up all the time)
+            Kubernetes executor 
+                resource optimization using Kubernetes
+                Spins up pods only when the task runs and kills the pod once the task is completed. Efficient resource utilization
+                During high time it can scale up, else scale down. We can assign memory to the pods through pod annotation  
+                so if a dag that runs only for 1 hour a day then it has assigned resources in celery and local for the 23 hours which is waste
+                less work for the scheduler as in case of celery and local, the scheduler needs to check the status of task 
+                but in Kubernetes pod will take care of it
+            sequential executor 
+                executes tasks sequnetial 
+                only run one task at a time
+                no parallelism
+        metadatadatabase
+            for storing the dag status,users list etc. 
+            webservers shows the dags status from metadatabase 
+            scheduler also updates the information in metadata database 
+        airflow cfg file : 
+            configuration file with all the details like how many tasks can run in parallel etc.
+            how many tasks each worker can run in parallel etc.
+        entrypoint.sh file : 
+    Operators https://medium.com/b6-engineering/airflow-writing-your-own-operators-and-hooks-93fcfbc7bd
+        Are the actual thing that executes a task that a DAG is defined
+        Operators can make use of hooks to connect to extenral services 
+        If there are bunch of python operators doing the same thing then encapsulate it as an operator
+        Operators may or may not communicate to extenral. eg: python operator does not communicate to any external service 
+    Sensors
+        Wait for some task to complete. Wait for some external / internal trigger
+        eg: externaltasksensor or s3event sensor 
+    Hooks 
+        Interface to external platforms/services of airflow 
+        hooks are the building blocks of operators 
+    Components ( >> )https://www.qubole.com/tech-blog/apache-airflow-tutorial-dags-tasks-operators-sensors-hooks-xcom/
+        DAG
+            TASK ( can be operators,sensors,subdags etc)
+            whenever a dag is created a new entry is made into the dag run table 
+            dag run : dagid + execution date 
+            subdag operator:
+                group tasks in a dag and can be called 
+        Bitshift/relationship builders
+            >> = setdownstream
+            << = setupstream
+        taskinstance
+            run instance of the task 
+        xcom 
+            sharing data between tasks in the same dag 
+            key value pairs
+            xcom push 
+            xcom pull
+        trigger_rule
+            rules like all_done,one_success etc 
+        provide_context 
+            true 
+            when set to true in an operator, it allows to use the various airflow context variables inside the operator
+            context variables includes triggerdate,runid etc
+            context will contain all the keyword arguments and that can be accessed from context 
+        How to pass value to one dag 
+            use triggerdagoperator and pass it as the config 
+            then it can be accessed using context
+        max_active_runs 
+        catchup
+        cron schedule : Airflow run DAGs at the end of the interval. 
+            Salesforce account runs at then end of 24 hours and that is why there is a diff between execution date and start date 
+                start date is when it actually triggered..execution date will be the previus day
+            https://towardsdatascience.com/airflow-schedule-interval-101-bbdda31cc463
+            https://stackoverflow.com/questions/67251814/airflow-execution-date-is-confusing
+            https://stackoverflow.com/questions/65196414/problem-with-start-date-and-scheduled-date-in-apache-airflow/65196624#65196624
+    Used operators 
+        Bashoperator 
+        pythonoperator
+        branchpythonoperator
+        postgresoperator
+        redshifttos3operator
+        slackoperator
+        triggerdagrun
+        presto_to_mysql
+        emailoperator
+        mysqloperator
+        simplehttpoperator
+        shortcircuitoperator
+            can be used to check if its past a week and then execute
+    Used sensors 
+        extenaltasksensor
+        datetimesensor
+        s3sensor: wait for specific file in s3 location
+        sqlsensor 
+    Used hooks 
+        postgres_hook
+        mysql_hook
+General
+    Different databases
+        Timeseries databases
+            what is Timeseries
+                Time is considered as one axis and the data is always appended so as to idenify what is happening.
+            Why Timeseries database and not normal DB's?
+                Scale - Normal DB's are not configured to scale at this level.
+                Usablity - More time related functins and desinged to handle it
+            influxdb
+            pipelinedb
+            Timeseriesdb
+        Mongo DB
+            Document database
+            Collections and documents instead of tables and rows
+packages used in Python
+    pandas
+    numpy
+    jinja
+    json
+    os
+    re
+    psycopg2
+    sqlalchemy
+    googlecloudapi
+    gensim
+    nltk
+    wordcloud
+    twitterapi
+    shutil
+    matplotlib
+    twitterapi
+    textblob : Contains sentiment functions
+Challenges
+    Package automation using biml scirpting.
+    postgresql copy command instead of using python for datatype checking.
+Steps for fixing performance issues
+    Look at the query execution plans.
+        Index or full table scans
+    Update stats so that CBO can generate better plans
+    Index rebuild 
+    Hints,plans and understand what is needed.
+    Index 
+    Partition 
+    MV 
+    CTE 
+    joins
+    denormalization
+
+    Query optimizer selects the plans for query execution. So it should always gives better plan for better performance http://www.dba-oracle.com/concepts/rule_based_optimizer.htm
+        Rule based optimizer :based on some predefined rules like always use index if its available.(Before oracle 7)
+        Cost based optimizer :taking into account the tables statistics(http://satya-dba.blogspot.com/2010/06/oracle-database-statistics-rbo-cbo.html)
+            So the optimizer generates a cost for each step and take the one with less cost
+            Optmizer needs the updated stats to get the better plan
+    performance optimization(https://www.dnsstuff.com/oracle-database-performance-issues-solutions)
+    Try to minimize the amount of data scanned during a sql operation
+    Avoid full table scans means reduce I/O
+    Use indexes to reduce full table scan but advised only if the data retrieved is less than 10%
+    Restrict the data using where clause 
+    Do not use * in select
+    Only select the columns required for query in columnar DB
+    Delete unnecessary table from queries
+    Use exists instead of in to halt at the first match
+  Do not use indexes on tables which are write heavy to avoid I/O
+    If mandatory then drop and recreate index before the write and after 
+  Use procedures 
+  Use MV
+  Use CTE
+  joins
+  denormalization
+  INDEX REBUILD : Resource intesive and blocking task. As it blocks, always go for a maintenance window
+    https://www.navicat.com/en/company/aboutus/blog/1303-how-to-tell-when-it-s-time-to-rebuild-indexes-in-oracle
+    Get the query plan, SQL statistics and wait time cost for the query.
+    Tune innefficient queries/rewrite the queries to make sure everything is correct.
+    Gather stats and analyze the table so that optimizer will generate good plans.
+    Lock the stats/query plan in SQL Profile so that optimizer takes it always.
+    hints( index, no index, parallel etc.)
+    index(full table scan if table is small)
+    partitions
+Data modelling:
+    super key : 1/set of columns which can uniquuely idenify an attribute.
+    candidate key : selected from super key only thing is it should not have redundant attributes
+    primary key : selected from candidate key based on DBA or ARCHITECT
+    non prime attribute : keys which are not part of candidate key
+    https://www.guru99.com/dbms-keys.html 
+    1nf
+        All values are atomic.eg: If there is a phone number column and it cannot hold multiple values.it should be coming as 2 rows.
+    2nf : https://www.javatpoint.com/dbms-second-normal-form
+        no partial dependency
+        All non prime attributes are fully functional dependent on primay key
+        eg: there is a composite primary key(student_id + subject_id) in table, If there is any attribute(teacher_name) which is depending only on one of the key
+        in composite key then it is called partial dependency
+        a non prime attribute is functionaly dependet on only one of the key of composite key.
+    3nf : https://www.javatpoint.com/dbms-third-normal-form
+        no transitive dependency
+        eg: if there are any attirbute in a table which dependent on any of the other attribute other than primary key, its called transitive dependency
+        a non prime attirbute depends on another non prime attrbute.
+    bcnf
+        a prime attribute depends on a non prime attribute
+Why should i go for postgresql:
+    open source object relational database system
+    ACID compliant
+    powerful Add ons
+    Extensible
+        We can define our own data types.
+        Document datatypes like json
+        Geometry datatypes like polygen
+Matillion https://www.persistent.com/blogs/matillion-the-modern-elt-etl-that-shows-real-potential/
+    Why Matillion 
+        Browser based UI 
+        Pre build connectors 
+        Create our own connectors to any REST API system
+        Automate data loads with scheduler 
+        Powerful transformations
+    Matillion is available 
+        as AMI Amazon machine image 
+        Consolidated billing in AWS account
+    Components
+        Orchestration : EL in ETL (controlling the execution flow like error handling etc)
+        Transformations : Transform in ETL ( calculating,aggregating, filtering etc:), pushdown optimization 
+        Shared jobs- orchestration jobs can be created as shared job-can be used for logging,auditing etc
+        Incremental data load--supported through AWS DMS (data migration service)
+        Variables 
+            Environment-global 
+            Job - Job specific 
+            Grid - 2d arrays that hold scalar values 
+            Automatic - 
+        Components
+            Custom coding using python script component 
+        REST API 
+    For logging : AWS cloudwatch integration is available.
+Apache Druid (https://codeburst.io/what-makes-apache-druid-great-for-realtime-analytics-61f817ee5ff6)
+    https://medium.com/data-reply-it-datatech/what-is-apache-druid-ad67bb8cd7f7
+    Open source solution for OLAP
+    Can ingest real time data 
+    Sub second latencies and highly available
+    Ingestion spec (Can specify files from s3,kafka etc)
+    Uses API to post ingestion spec
+    has high uptime
+    Only good for inserts, also only good for single fact table with small lookups not ideal for joins 
+    Features : https://druid.apache.org/docs/latest/design/index.html
+        columnar data storage
+        scalable distributed systems
+            clusters of lot of servers
+        mpp engine
+            process a query in parallel across nodes in cluster
+        ingestion
+            druid can ingest realtime or batch 
+        data is stored in deep storage 
+            either in s3 or hdfs 
+        uses bitmap indexes 
+        time based partitioning
+            Druid first partitions data by time, and can additionally partition based on other fields.
+            This means time-based queries will only access the partitions that match the time range of the query.
+            This leads to significant performance improvements for time-based data.
+        Approximate algorithms
+            to get approx count etc. this is faster than exact computation
+        Automatic summarization at ingestion time(pre aggregation)
+    Aggregation of data is not advisable in RDBMS like mysql(As it needs to scan multiple rows to get data)
+    nodes https://www.xenonstack.com/blog/apache-druid
+        processes - COBR-mh
+            coordinator
+            Overlord
+            Brokers
+            Historical
+            Middle manager
+            routers
+        server
+            master 
+                manages ingestion and coordinating the Availablity of data on servers
+                coordinator and overload
+            query
+                brokers and routers 
+                handles queries and external clients 
+            data
+                middle manager and historical process
+                helps in executing the jobs 
+        metadata storage
+            mysql and postgresql  
+        deep storage
+            uses seperate storage for deep storage: s3 or hdfs
+        Apache zookeper basically coordinates all these nodes
+    Druid data is organized into segments
+        where it is summarized 
+    Advantages of druid:
+        Seperation of responsiblities - As there are multiple nodes for each purpose
+        Columnar storage
+        Bit map index is maintained for certain columns which makes it easy to access
+        Pre aggregation- Aggregate the data during ingestion -Granularity (Like no of visits made)
+        Time based patitioning 
+        SQL based querying and JSON based querying
+Mongo
+  open source
+  document database 
+  write anything you want.json like format
+  highly scalable, flexible and distributed NOSQL 
+  Dynamic schema
+  Embded document ( json within json)
+  single primary node (if it goes down it will be unavailable can read but cant write)
+  primary--secondry ( primary to secondry via operation log)
+  secondary copies from primary/secondry provided the chaining should be enabled
+  mongodb creates an ID by its own
+  Collection and documents 
+  shrading : indexed column = based on this the data is replicated into multiple primary servers
+AWS (Public cloud)
+    Types of cloud storage
+        https://www.javatpoint.com/types-of-cloud
+    Three basic type of services
+        compute - EC2, Lambda etc  
+        storage - s3, Glacier etc 
+        networking - Route 53,VPC etc
+    Regions and AZ
+        Regions are seperate geo areas like us-east-1,us-west-1 etc
+        AZ are present inside regions(Isolated zones that are replicated)
+    S3
+        There should be atleast one bucket(container) to store objects
+        Bucket name should be unique
+            Cant contain nested buckets 
+            But can contain folders and subfolders
+            Only 100 buckets per account
+            Bucket doesnot have any size restriction. It can store an object of any size
+        http://< BUCKET_NAME>.s3.amazonaws.com/< OBJECT_NAME >
+        Type of bucket versioning
+            To keep multiple versions of objects in the same bucket
+            Helps in recovering objects 
+            If we delete a object in versioned bucket,it puts a deletion marker and doesnot permanantly delete it
+            If we overwrite an object, it results in a new version
+            Once versioning enabled cannot be reverted to an unversioned but can suspend the versioning 
+        How the data is stored?
+        A single bucket can be from o to 5TB 
+        In single upload you can put upto 5GB but it should enable multipart upload capablity
+        Storage classes in s3 
+            S3 Standard
+            S3 Intelligent-Tiering
+            S3 Standard-Infrequent Access (S3 Standard-IA) 
+            S3 One Zone-Infrequent Access (S3 One Zone-IA) 
+            S3 Glacier Deep Archive
+    RDS
+        DB instance class : Determines the computation and memory capacity of the instance
+            Can select dependeing on performance and memory requirements
+            It can be standard,memory optimized and burstable performance 
+            db.m4/db.m5 = Mostly go with this as this is a standard one 
+            db.r5=Memory oriented 
+            db.t2/t3 = performance oriented 
+    GLUE
+        Glue data catalog
+    EC2
+    EBS
+    SNS SQS 
+        https://www.youtube.com/watch?v=mXk0MNjlO7A
+    IAM (https://www.youtube.com/watch?v=y8cbKJAo3B4)
+        How to create : https://www.youtube.com/watch?v=dMPDZHVIZBs
+        The account created using credit card and email address is the root account 
+        Using root account and IAM create user account with priveleges and use it rather than using root account
+        Accessing aws account 
+            Web console 
+            CLI
+                Access keys 
+            API
+        Users = Individual user 
+        Groups = Group of users 
+        Roles = Collection of policies 
+        Policies = At resource level. Tells this dynamo table got read access, another policy for this dynamo table to have write access 
+        Scenario : Intern students can be created as a group and provide access to Individual policy that got read 
+                   developers can be created as a group and provide access to the role ( which is a collection of multiple policies)
+        ARN = Amazon resource names
+SQL Server
+Mysql
+    innodb = defaul storage engine in mysql
+    Shards https://www.digitalocean.com/community/tutorials/understanding-database-sharding
+    minus query = Not available so use left outer join 
+Hive/HiveQL
+    https://www.tutorialspoint.com/hive/hive_introduction.htm
+    Amazon EMR Clusters : With Hive on top of it 
+Oracle
+    Analyze command is used before oracle 8i newer version should use dbms_stats procedure
+HDFS(Hadoop distributed file system)(Storage and high efficency)(https://www.datanami.com/2018/05/16/big-data-file-formats-demystified/)
+    https://www.xplenty.com/blog/storing-apache-hadoop-data-cloud-hdfs-vs-s3/
+    https://hevodata.com/learn/hadoop-s3-comparison/
+    Cost effective way to store huge amount of data
+    HDFS layer of a cluster contains:
+        Master node (Name node)
+        Slave nodes (Data node instance)
+        Namenode : contains the data location 
+        datanode: responsible for storing and retreiving the data 
+        This data is stored and copied across multiple nodes(redundancy) so that its fault tolerant
+    Store all type of structued,semi structured and unstructured data
+    This can be proccessed using variety of ways like hive,spark,presto etc
+    Storing data in hadoop in human readable format like csv,json etc is inefficient as these cannot be stored in a parallel manner
+        So this limits scalablity and parallel processing
+    Suggested way to store is in Parquet,Avro or ORC(optimized row columnar)
+        All 3 are optimized for hadoop
+        All 3 provide compression to an extend
+        All 3 are machine readable binary format/ garbage to human eyes 
+        All 3 can be split across multiple disks 
+        All 3 carry data schemas within which makes it portable
+        P and O stores data in columnar format while A stores it row wise 
+            P and O is best suited for ready heavy analytical queries as its columnar but A is suited for heavy write based ones 
+            If storage optimization is the primary concern then go with P and O because of high compression
+        Better schema evolution is for Avro  as it uses json for describing data and binary format for storing
+        ORC + Apache Hive + Hortonworks data platform 
+        Parquet + Impala + Cloudera hadoop distribution
+        comparison 
+        Parquet: schema evolution is expensive, compression good, column, read heavy , Spark 
+        AVRO : Excellent schema evolution as schema is stored as a json file within file, not good for compression, row, write heavy , Kafka 
+        ORC : schema evolution only supported in adding cols/column widening , compression good, column, read heavy , hive/presto 
+    https://databricks.com/blog/2017/05/31/top-5-reasons-for-choosing-s3-over-hdfs.html
+    HDFS vs S3:
+        scalablity : Better scalable (s3 wins):
+            HDFS: both horizontal(add harddrive to existing node) or vertical(Add nodes) possible but costly.
+            S3 : scales vertically and automatically.Practically infinte amout of storage and its cheaper.
+        Durablity : Data good without corruption (s3 wins):
+            HDFS: depends on instance and in most cases have only some instances. Large instances have better Durablity
+            S3:  AWS provides a 99.9999 percentage of guarantee 
+        Persistance : Does the data continue to live in case the process stops in between 
+            HDFS: Data does not persist when stopping EC2 or EMR instances. Can use costly EBS to persist data
+            S3: Data is always persistant in s3 
+        Price (s3 is the clear winner): 
+            HDFS : HDFS copies 3 times the data and hence triple storage is needed. 
+            S3 : S3 by default handles the backup and also supports compression
+        Performance (HDFS winner): 
+            HDFS : Performance is much better as storing and processing is on the same machine(data node).
+            S3: Not so great. 
+        Security:
+            Both have good security.
+Data file formats (https://www.nexla.com/resource/introduction-big-data-formats-understanding-avro-parquet-orc/) https://www.youtube.com/watch?v=sLuHzdMGFNA
+    CSV works well in case of less number of records like 50K but not in case of 2 million records 
+    https://medium.com/ssense-tech/csv-vs-parquet-vs-avro-choosing-the-right-tool-for-the-right-job-79c9f56914a8
+    Parquet : columnar and good for less number of fields to access 
+    Apache AVRO : Schema validation and row based.
+        Defined in JSON 
+        Data schema system
+            Includes the data type of each field
+        When dats send in avro format, it is compressed into binary format over network.
+            Binary format helps in reducing storage and improves the speed.
+        Attributes
+            Name = Name of the schema
+            Namespace = Namespace of the schema 
+            Type = Record
+            Fields = Array of fields (We can also mention )
+    ORC (Optimized row columnar)
+    JSON
+        Key will be quoted if its string
+        If there are multiple things then use list []
+    CSV
+    Textfile
+Netezza
+    OLAP appliance for performance
+    Twinfin
+    Was good in performance
+    No indexes in NZ 
+    Delete and insert in case of updates
+Unix shell scripting
+    What is shell : Interface between user and kernel (There is only 1 kernel but there can be multiple shells)
+    Commonly used shells : bash,ksh,Bourne,csh
+    Soft links and hard links (https://ostechnix.com/explaining-soft-link-and-hard-link-in-linux-with-examples/)
+    sed print (https://www.thegeekstuff.com/2009/09/unix-sed-tutorial-printing-file-lines-using-address-and-patterns/)
+        sed -n '10'p file.txt = Prints the 10th line
+            (If not using n then it will print the output of each line to standard output )
+        sed -n '4,8'p thegeekstuff.txt = Prints the 4th to 8th line 
+        sed -n '3~2'p thegeekstuff.txt = Prints every 2nd line starting from 3 rd line
+        sed -n ‘$’p filename = $ is for last line. So this is to print the last line of the file
+        sed -n '/PATTERN/'p filename = Prints the line that matches the pattern 
+    sed = Stream editor (Mainly to replace the content, delete without opening)
+        sed 's/unix/linux/' geekfile.txt = To replace unix with linux. s stands for subtitution. (This replaces only the first occurance)
+            (use -i "" to replace and save on the same file)
+            (use sed 's/unix/linux/' geekfile.txt > newgeekfile.txt to write to a new file)
+        sed 's/unix/linux/2' geekfile.txt = Replace the 2nd occurance in a line 
+        sed 's/unix/linux/g' geekfile.txt = Replace all occurances
+        sed '3 s/unix/linux/' geekfile.txt = Replace only on the 3rd line
+        sed '5d' filename.txt = This is to delete the 5th line from the file
+        sed '3,6d' filename.txt = This is to delete the 3rd to 6th lines from the file 
+        sed '/abc/d' filename.txt = pattern matching deletion. Match abc and delete it
+    find . -iname "renjith*" = Recursively find in current directory for files with casesensitive and contain renjith on it
+    grep -ir pattern * = Recursive case insensitive on all the files in current direcotry
+    vi = For file manipulation
+    top = To list the top process that uses the memory 
+    ps -a = List the process
+    kill -9 PID = To kill the pid
+    df -h = Memory
+    ssh = to connect to a remote server
+    ftp = to copy one file to another
+    echo $$ = Currently executing process 
+    What is shebang?
+        It is nothing but the absolute path to the Bash interpreter.
+        Script execute using the interpreter specified in the first line
+        If not specified, it uses the default one
+    https://www.cyberciti.biz/faq/bash-for-loop/
+    https://www.tutorialspoint.com/cprogramming/c_do_while_loop.htm
+Apache presto
+    EMR with presto on top of it 
+    hive vs presto : https://www.indellient.com/blog/getting-started-with-presto-hive-on-aws/
+    https://www.pluralsight.com/guides/interactive-queries-on-hadoop-with-presto
+    https://www.xplenty.com/blog/presto-vs-hive/
+    presto is good for hourly/daily reports and hive is good for weekly/monthly reports 
+    presto can be deployed as a service on EMR clusters
+    Presto is preferably used for performing quick and fast data analysis that will not require very much memory
+    Presto is designed for low latency while on the other hand Hive is used for query throughput and queries that require very large amount of memory.
+    We can also use both tools to explore data sitting on top of a Hadoop system
+    Large memory usage and bad performance are commonly seen if Presto is not configured correctly
+    Architecture
+        client
+        coordinator node
+        worker 
+            coordinator assign jobs to worker node 
+        connector
+            To connect to different DB, add a properties file into the catalog folder
+                eg:mysql.properties,hive.properties etc 
+            For connecting to hdfs,s3..add the table in hive metastore or glue metastore with the file name (parquet) with the partition 
+    performance handling 
+MDM
+    Master data 
+        customer
+        product
+        vendor
+    Will have master data from lot of systems like CRM,ERP etc. 
+CDP
+    customer data platform
+Datalake 
+    data silos
+    https://www.i-scoop.eu/big-data-action-value-context/data-lakes/
+    https://www.snowflake.com/guides/what-data-lake
+Datalakehouse
+    https://medium.com/adfolks/data-lakehouse-paradigm-of-decade-caa286f5b7a1
+ETL vs ELT  https://aws.amazon.com/blogs/big-data/etl-and-elt-design-patterns-for-lake-house-architecture-using-amazon-redshift-part-1/
+    ELT is basically datalake
+AWS Glue
+    https://medium.com/@bv_subhash/demystifying-the-ways-of-creating-partitions-in-glue-catalog-on-partitioned-s3-data-for-faster-e25671e65574
+    https://betterdev.blog/creating-athena-tables/
+AWS 
+    S3 and Lambda : https://www.google.com/search?q=s3+event+lambda+python&oq=s3+event+to+lambda+&aqs=chrome.2.69i57j0i22i30l8.7346j0j4&sourceid=chrome&ie=UTF-8#kpvalbx=_2FosYe-zBZforQG26qjIDg21
+    Cloudwatch : Most of the metrics
+    Lambda
+        Each lambda function generates its on ARN 
+        This can be then passed to the functions to execute.
+        Memory can be allocated to each function.
+    SNS and SQS :
+    Step functions 
+    IAM 
+    Quicksight
+        Similar to BI tools 
+REST API (Representation of state) https://eylearning.udemy.com/course/api-and-web-service-introduction/learn/lecture/13970508#notes
+    https://technologyadvice.com/blog/information-technology/how-to-use-an-api/
+    https://developer.ibm.com/articles/what-is-curl-command/
+    API - application programming interface 
+        A interface(mobile/computer) through which we can call a program(search,order create) in an application(google,dominos etc)
+        Contains a request sent throgh to an application and receive back a response (response code 200(succ),400(Err in interface),500(err in application))
+        An API will not give you all of a program’s information or code, because what would stop you from replicating the entire code base? Instead, an API provides you with data its programmers have made available to outside users.
+    HTTP 
+        startline  -method (get,put,etc)
+        header  - contentype 
+        blankline
+        body - anything 
+    Method types 
+        GET - read
+        POST - create 
+        PUT - update 
+        DELETE - delete 
+    API can be called as 
+        SOAP - Older one which uses XML 
+        REST - New one and it uses JSON 
+    REST is stateless
+        means a request sent to an application will wait for the completion of program and send the response even if the application is down
+    CACHING 
+    AUTHENTICATION 
+        proving your identity 
+    AUTHORIZATION 
+        limiting access..they can only access the photos in this folder
+    OAuth 
+        both authentication and autherization ( example of app in a phone )
+    API Keys  https://rapidapi.com/blog/api-glossary/api-key/
+        Normally for a project or application that makes call to API 
+        Username and password/Authentication is used for users 
+    Bearer Token 
+        Does not ask for any username password
+        Get access to API by giving bearer token
+    ways of calling API 
+        curl : client url
+            4 main parts in curl
+                endpoint : the server to which we send the request
+                http method : get,put,post 
+                headers : content type etc 
+                body : if any body needs to sent 
+        postman 
+            for stuffs that are of urgent need 
+        requests
+            requests library use reponse and convert it to json 
+    calling fullcontact API 
+        https://pypi.org/project/python-fullcontact/#adding-to-your-project
+data governance ( encryption/masking/hashing)
+    https://www.talend.com/resources/what-is-data-governance/
+    IAM roles in AWS 
+    Encryption
+        Masking 
+        Hashing : sha256 or md5 
+data retention 
+data silos 
+data steward
+git 
+    git clone 
+    git init 
+    git commit 
+    git push 
+    git add 
+    git merge -- fast forward ( When the feature branch is merged and there are no changes in the master branch in between)
+    git merge (MERGE COMMIT)  : If some changes are on master before we merge..it will ask for commit and its a merge commit 
+        merge commits can happen other way also..if one feature branch is open for long time and then if i need to have master branch changes 
+        into my feature branch, then i need to merge commit it into the feature branch from master 
+    git log 
+    git reset --hard commit_id 
+        to remove one commit 
+    git rebase
+        if one feature branch is open for long time and then if i need to have master branch changes 
+        into my feature branch, then i need to merge commit it into the feature branch from master or REBASE my master from which the feature started 
+            git checkout feature and then do a git rebase master 
+        git rebase is to get a cleaner history 
+    git squash
+        squash all the commits to 1 single commit
+        git rebase -i ~3
+    git stash 
+

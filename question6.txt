@@ -1,0 +1,32 @@
+The architecture explained in next generation DWH google cloud talk is really good and it helps in solving 
+the performance,scalablity and operational maintenece issues.
+
+What i liked the most in next generation dwh architecture: 
+
+  1) The pyramid strucutre in maintaining the access controls and granularity.
+  2) The Ingestion and transformation done for ETL/ELT process. 
+  3) The Data governance and data model clearly explains how the data is stored and can be controlled.
+  4) Usage of wrapper really helps in language portablity. 
+
+What I think that can be added to improve?
+
+  I think the Modern BI architecture will enhance most of the nuances and below are my suggestions.
+
+  a) For streaming data it's better to bring a time series database as it will be an insert only process. 
+  I suggest apache druid for the same because of its column oriented architecture and performance.
+  It makes it a really good candidate as it improves the analytical capablities on streaming data.
+  It also provides a direct connection for kafka topics and data can be written in a structured way into druid.
+
+  2) For visualization i prefer Apache superset over metabase and tableau.
+  It provides very rich visualization and is very easy to manage. The learning curve for the same 
+  is very less and all kind of people (data analyst,scientist,BA) etc can easily adapt to it. 
+
+  3) I prefer adding Apache Presto/Trino to the technical stack as gojek has a lot of data sources and presto will 
+  really help in bringing a query layer on top of all the data sources together. There is no need to bring the data 
+  into a single data lake/warehouse for querying purposes. It should really help the data engineers,scientists and BI.
+  Apache presto can easily be queried using standard ANSI SQL and can easily be managed. 
+
+  4) For database script maintenance, I prefer using Flyway which helps in better maintenance and reverting the database 
+  to actual status in case of any DB issues. 
+
+  5) I am not clear on how the deployments are managed. Jenkins can be brought here if it's not already there.
